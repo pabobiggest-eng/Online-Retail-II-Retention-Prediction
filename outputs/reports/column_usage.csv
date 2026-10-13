@@ -1,0 +1,10 @@
+raw_column,status,how_it_is_used,missing_pct_in_raw
+Invoice,Used,"Cancel filter, order grouping -> invoice/basket/frequency features, return features",0.0
+StockCode,Used,"Non-product filter, unique_products, repeat_product_share",0.0
+Description,NOT used in model,"Free text (5,000+ variants); used only for EDA product names",0.41
+Quantity,Used,"Quantity<=0 filter, Sales, total_quantity, items_per_invoice",0.0
+InvoiceDate,Used,"90/180-day windows, recency, gaps, seasonality, temporal split",0.0
+Price,Used,"Price<=0 filter, Sales, mean_line_price",0.0
+Customer ID,Used,Entity key (rows without it cannot be followed over time),22.77
+Country,Used,is_uk_customer,0.0
+SourceSheet,Technical only,Removed after de-duplicating the overlapping sheets,0.0

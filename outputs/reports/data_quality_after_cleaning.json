@@ -1,7 +1,10 @@
 {
     "original_rows": 1067371,
-    "original_columns": 10,
-    "exact_duplicates": 12133,
+    "sheets": {
+        "Year 2009-2010": 525461,
+        "Year 2010-2011": 541910
+    },
+    "exact_duplicates_incl_sheet_overlap": 34335,
     "missing_values": {
         "Invoice": 0,
         "StockCode": 0,
@@ -10,26 +13,27 @@
         "InvoiceDate": 0,
         "Price": 0,
         "Customer ID": 243007,
-        "Country": 0,
-        "SourceSheet": 0,
-        "IsCancelledInvoice": 0
+        "Country": 0
     },
     "missing_customer_ids": 243007,
+    "missing_customer_id_pct": 22.77,
     "missing_descriptions": 4382,
-    "cancelled_invoice_rows": 19494,
-    "nonpositive_quantity_rows": 22950,
-    "nonpositive_price_rows": 6207,
-    "invalid_date_rows": 0,
-    "source_sheets": [
-        "Year 2009-2010",
-        "Year 2010-2011"
-    ],
-    "rows_after_deduplication": 1055238,
-    "rows_after_cleaning": 793609,
-    "rows_removed_overall": 273762,
-    "unique_customers": 5878,
-    "unique_invoices": 36969,
-    "unique_products": 4631,
+    "rows_after_cleaning": 776579,
+    "rows_removed_overall": 290792,
+    "unique_customers": 5852,
+    "unique_invoices": 36594,
+    "unique_products": 4620,
     "date_start": "2009-12-01 07:45:00",
-    "date_end": "2011-12-09 12:50:00"
+    "date_end": "2011-12-09 12:50:00",
+    "missing_values_after_cleaning": {
+        "Invoice": 0,
+        "StockCode": 0,
+        "Description": 0,
+        "Quantity": 0,
+        "InvoiceDate": 0,
+        "Price": 0,
+        "Customer ID": 0,
+        "Country": 0,
+        "Sales": 0
+    }
 }

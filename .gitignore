@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 dataset/
 *.xlsx
+**/.venv/
+*.py[cod]
+.ipynb_checkpoints/
+/online_retail_II.xlsx

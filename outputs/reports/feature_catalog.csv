@@ -1,0 +1,24 @@
+feature,group,description,source_columns,why_used,missing_pct,train_univariate_auc,status,reason
+total_spend,Monetary,Total GBP spent in first 90 days,"Quantity, Price",Big spenders are more engaged and more likely to return,0.0,0.713,kept,"informative, not redundant"
+total_quantity,Monetary,Total units bought,Quantity,Volume signals wholesale / stock-up behaviour,0.0,0.706,kept,"informative, not redundant"
+average_basket_value,Monetary,Mean invoice value,"Invoice, Quantity, Price",Typical order size,0.0,0.611,kept,"informative, not redundant"
+maximum_basket_value,Monetary,Largest invoice value,"Invoice, Quantity, Price",Peak purchasing capacity,0.0,0.648,kept,"informative, not redundant"
+std_basket_value,Monetary,Std-dev of invoice values (0 if one invoice),"Invoice, Quantity, Price",Stable vs erratic ordering,0.0,0.672,kept,"informative, not redundant"
+first_basket_value,Monetary,Value of the very first invoice,"Invoice, Quantity, Price",Strength of the first impression / acquisition order,0.0,0.603,kept,"informative, not redundant"
+items_per_invoice,Monetary,Units per invoice,"Quantity, Invoice",Basket depth,0.0,0.609,kept,"informative, not redundant"
+spend_per_active_day,Monetary,Spend per shopping day,"Quantity, Price, InvoiceDate",Intensity of each visit,0.0,0.613,dropped,|rho|=0.98 with average_basket_value
+mean_line_price,Monetary,Mean unit price of lines,Price,Premium vs cheap product mix,0.0,0.521,kept,"informative, not redundant"
+unique_invoices,Frequency,Number of invoices,Invoice,Core frequency signal (RFM 'F'),0.0,0.698,kept,"informative, not redundant"
+active_purchase_days,Frequency,Distinct shopping days,InvoiceDate,"Visits, ignoring split baskets",0.0,0.702,dropped,|rho|=0.96 with unique_invoices
+invoices_last_30d,Frequency,Invoices in days 60-90,"Invoice, InvoiceDate",Recent momentum,0.0,0.631,kept,"informative, not redundant"
+spend_last_30d_share,Frequency,Share of spend made in days 60-90,"Quantity, Price, InvoiceDate",Accelerating vs fading engagement,0.0,0.621,dropped,|rho|=0.97 with invoices_last_30d
+recency_days_at_day_90,Recency,Days between last purchase and day 90,InvoiceDate,Core recency signal (RFM 'R'),0.0,0.687,kept,"informative, not redundant"
+days_to_second_purchase,Recency,Days from 1st to 2nd shopping day (NaN if none),InvoiceDate,Speed of habit formation,56.3,0.538,kept,"informative, not redundant"
+average_days_between_visits,Recency,Mean gap between shopping days (NaN if 1 visit),InvoiceDate,Purchase rhythm,56.3,0.542,kept,"informative, not redundant"
+unique_products,Variety,Distinct StockCodes bought,StockCode,Breadth of interest,0.0,0.656,kept,"informative, not redundant"
+repeat_product_share,Variety,Share of products bought on 2+ invoices,"StockCode, Invoice",Re-ordering / loyalty to products,0.0,0.677,kept,"informative, not redundant"
+is_uk_customer,Profile,1 if first order country is United Kingdom,Country,Domestic vs export behaviour,0.0,0.501,kept,"informative, not redundant"
+first_month_sin,Seasonality,Sine of first-purchase month,InvoiceDate,Cyclical season (Dec != Jan-adjacent otherwise),0.0,0.596,excluded by design,needs 2+ annual cycles; purged train covers only Dec-Apr (ablation in final report)
+first_month_cos,Seasonality,Cosine of first-purchase month,InvoiceDate,Cyclical season of acquisition,0.0,0.598,excluded by design,needs 2+ annual cycles; purged train covers only Dec-Apr (ablation in final report)
+cancelled_invoices_90d,Returns,Cancelled invoices in first 90 days,Invoice (C...),Dissatisfaction / return behaviour,0.0,0.578,kept,"informative, not redundant"
+return_value_ratio,Returns,Returned value / spend,"Invoice (C...), Quantity, Price",Share of spend that came back,0.0,0.563,dropped,|rho|=0.98 with cancelled_invoices_90d

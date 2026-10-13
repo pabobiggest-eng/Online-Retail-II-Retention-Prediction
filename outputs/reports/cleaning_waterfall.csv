@@ -1,0 +1,10 @@
+step,rows_removed,rows_remaining
+Start (all sheets stacked),0,1067371
+Exact duplicates (incl. sheet overlap),34335,1033036
+Cancelled invoices (C...),19104,1013932
+Other non-numeric invoices (A... adjustments),6,1013926
+Missing Customer ID (guest orders),234431,779495
+Invalid date,0,779495
+Quantity <= 0,0,779495
+Price <= 0,70,779425
+"Non-product codes (POST, M, fees...)",2846,776579

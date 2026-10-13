@@ -1,14 +1,13 @@
-Best model: Logistic Regression
-Selection approach: cv_pr_auc_mean
-Split type: temporal
-Train customers: 3980
-Test customers: 997
+Best model: Extra Trees (tuned)
+Selection: highest 5-fold CV PR-AUC on the training set
+Split: purged temporal | threshold 0.50
+Train 2483 | Test 992
 
               precision    recall  f1-score   support
 
-           0       0.80      0.79      0.79       682
-           1       0.55      0.56      0.56       315
+           0       0.79      0.78      0.78       676
+           1       0.54      0.56      0.55       316
 
-    accuracy                           0.72       997
-   macro avg       0.67      0.67      0.67       997
-weighted avg       0.72      0.72      0.72       997
+    accuracy                           0.71       992
+   macro avg       0.66      0.67      0.67       992
+weighted avg       0.71      0.71      0.71       992

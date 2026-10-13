@@ -1,136 +1,88 @@
 {
     "dataset": "dataset\\online_retail_II.xlsx",
     "original_rows": 1067371,
-    "cleaned_rows": 793609,
-    "cleaned_customers": 5878,
-    "ml_eligible_customers": 4977,
-    "feature_count": 11,
-    "target": "purchase in days 90-180 after first purchase",
-    "feature_window": "first 90 days after first purchase",
-    "split_type": "temporal",
-    "best_model": "Logistic Regression",
-    "selection_approach": "cv_pr_auc_mean",
-    "successful_models": 10,
-    "model_results": [
-        {
-            "model": "Logistic Regression",
-            "accuracy": 0.7161484453360081,
-            "precision": 0.5496894409937888,
-            "recall": 0.5619047619047619,
-            "f1_score": 0.5557299843014128,
-            "roc_auc": 0.7050179211469536,
-            "pr_auc": 0.5712652270544418,
-            "cv_pr_auc_mean": 0.7155020355465165,
-            "cv_pr_auc_std": 0.011965242141875904,
-            "status": "success"
-        },
-        {
-            "model": "Decision Tree",
-            "accuracy": 0.7121364092276831,
-            "precision": 0.547945205479452,
-            "recall": 0.5079365079365079,
-            "f1_score": 0.5271828665568369,
-            "roc_auc": 0.6648326583810453,
-            "pr_auc": 0.46417993471751495,
-            "cv_pr_auc_mean": 0.6191308598144898,
-            "cv_pr_auc_std": 0.015976916017926696,
-            "status": "success"
-        },
-        {
-            "model": "Random Forest",
-            "accuracy": 0.6800401203610833,
-            "precision": 0.4942528735632184,
-            "recall": 0.546031746031746,
-            "f1_score": 0.5188536953242836,
-            "roc_auc": 0.6746450681934553,
-            "pr_auc": 0.5677080814862241,
-            "cv_pr_auc_mean": 0.6798976574276556,
-            "cv_pr_auc_std": 0.007078500047672756,
-            "status": "success"
-        },
-        {
-            "model": "Extra Trees",
-            "accuracy": 0.6780341023069207,
-            "precision": 0.49122807017543857,
-            "recall": 0.5333333333333333,
-            "f1_score": 0.5114155251141552,
-            "roc_auc": 0.6748475538798119,
-            "pr_auc": 0.5283648433041186,
-            "cv_pr_auc_mean": 0.6755330780338707,
-            "cv_pr_auc_std": 0.012377188766214601,
-            "status": "success"
-        },
-        {
-            "model": "K-Nearest Neighbors",
-            "accuracy": 0.641925777331996,
-            "precision": 0.44502617801047123,
-            "recall": 0.5396825396825397,
-            "f1_score": 0.4878048780487805,
-            "roc_auc": 0.6362658846529814,
-            "pr_auc": 0.4637277763375788,
-            "cv_pr_auc_mean": 0.6124270575565385,
-            "cv_pr_auc_std": 0.01848244725623521,
-            "status": "success"
-        },
-        {
-            "model": "Support Vector Machine",
-            "accuracy": 0.728184553660983,
-            "precision": 0.5748299319727891,
-            "recall": 0.5365079365079365,
-            "f1_score": 0.555008210180624,
-            "roc_auc": 0.6987338826048504,
-            "pr_auc": 0.5538889035348655,
-            "cv_pr_auc_mean": 0.6791081809714712,
-            "cv_pr_auc_std": 0.022830850237346413,
-            "status": "success"
-        },
-        {
-            "model": "Gaussian Naive Bayes",
-            "accuracy": 0.7071213640922769,
-            "precision": 0.5481171548117155,
-            "recall": 0.4158730158730159,
-            "f1_score": 0.4729241877256318,
-            "roc_auc": 0.679397663268631,
-            "pr_auc": 0.5393976512682676,
-            "cv_pr_auc_mean": 0.6977577339179367,
-            "cv_pr_auc_std": 0.011894891452681659,
-            "status": "success"
-        },
-        {
-            "model": "Gradient Boosting",
-            "accuracy": 0.728184553660983,
-            "precision": 0.5859375,
-            "recall": 0.47619047619047616,
-            "f1_score": 0.5253940455341506,
-            "roc_auc": 0.6852045803658707,
-            "pr_auc": 0.5727268422787647,
-            "cv_pr_auc_mean": 0.7066932453818838,
-            "cv_pr_auc_std": 0.012620797160357777,
-            "status": "success"
-        },
-        {
-            "model": "Hist Gradient Boosting",
-            "accuracy": 0.6900702106318957,
-            "precision": 0.5102040816326531,
-            "recall": 0.47619047619047616,
-            "f1_score": 0.49261083743842365,
-            "roc_auc": 0.68686170460364,
-            "pr_auc": 0.5660130740284903,
-            "cv_pr_auc_mean": 0.689570469667008,
-            "cv_pr_auc_std": 0.004023991175665506,
-            "status": "success"
-        },
-        {
-            "model": "Neural Network MLP",
-            "accuracy": 0.728184553660983,
-            "precision": 0.5808823529411765,
-            "recall": 0.5015873015873016,
-            "f1_score": 0.5383304940374787,
-            "roc_auc": 0.7089931573802541,
-            "pr_auc": 0.5828942512439486,
-            "cv_pr_auc_mean": 0.7089230117723154,
-            "cv_pr_auc_std": 0.013934588077933486,
-            "status": "success"
-        }
+    "cleaned_rows": 776579,
+    "customers_after_cleaning": 5852,
+    "customers_modelled": 4952,
+    "candidate_features": 21,
+    "selected_features": [
+        "total_spend",
+        "total_quantity",
+        "average_basket_value",
+        "maximum_basket_value",
+        "std_basket_value",
+        "first_basket_value",
+        "items_per_invoice",
+        "mean_line_price",
+        "unique_invoices",
+        "invoices_last_30d",
+        "recency_days_at_day_90",
+        "days_to_second_purchase",
+        "average_days_between_visits",
+        "unique_products",
+        "repeat_product_share",
+        "is_uk_customer",
+        "cancelled_invoices_90d"
+    ],
+    "dropped_features": {
+        "spend_per_active_day": "|rho|=0.98 with average_basket_value",
+        "active_purchase_days": "|rho|=0.96 with unique_invoices",
+        "spend_last_30d_share": "|rho|=0.97 with invoices_last_30d",
+        "return_value_ratio": "|rho|=0.98 with cancelled_invoices_90d"
+    },
+    "class_counts": {
+        "0": 2757,
+        "1": 2195
+    },
+    "imbalance_level": "balanced / mild",
+    "split_type": "purged temporal",
+    "train_customers": 2483,
+    "purged_customers": 1477,
+    "test_customers": 992,
+    "final_model": "Extra Trees (tuned)",
+    "threshold": 0.5,
+    "oof_tuned_threshold": 0.3,
+    "test_metrics_threshold_0.50": {
+        "accuracy": 0.7066532258064516,
+        "balanced_accuracy": 0.667637255636282,
+        "precision": 0.5379939209726444,
+        "recall": 0.560126582278481,
+        "f1": 0.5488372093023256,
+        "mcc": 0.3317895582483105,
+        "roc_auc": 0.7160091004419145,
+        "pr_auc": 0.5987644210346055,
+        "brier": 0.1985906715066492
+    },
+    "test_metrics_tuned_threshold": {
+        "accuracy": 0.46875,
+        "balanced_accuracy": 0.5722885926147854,
+        "precision": 0.3598937583001328,
+        "recall": 0.8575949367088608,
+        "f1": 0.5070159027128157,
+        "mcc": 0.15751438284233915,
+        "roc_auc": 0.7160091004419145,
+        "pr_auc": 0.5987644210346055,
+        "brier": 0.1985906715066492
+    },
+    "bootstrap_95ci": {
+        "f1": [
+            0.5015967538723783,
+            0.5947857587778251
+        ],
+        "roc_auc": [
+            0.6785202736287438,
+            0.7508918674850449
+        ],
+        "pr_auc": [
+            0.5478392665991532,
+            0.6522030614133031
+        ]
+    },
+    "top_features": [
+        "average_days_between_visits",
+        "days_to_second_purchase",
+        "recency_days_at_day_90",
+        "total_spend",
+        "unique_invoices"
     ]
 }

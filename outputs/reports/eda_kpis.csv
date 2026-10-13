@@ -1,0 +1,18 @@
+,value
+Rows (clean),776579
+Invoices,36594
+Customers with ID,5852
+Products (StockCode),4620
+Countries,41
+Date from,2009-12-01
+Date to,2011-12-09
+Total revenue (GBP),17068582.72
+Average order value (mean),466.43
+Average order value (median),302.55
+Average units per order,286.9
+Average lines per order,21.2
+Repeat customers (>=2 invoices) %,72.35
+Revenue from repeat customers %,96.74
+Top 20pct customers revenue share %,77.17
+United Kingdom revenue share %,83.71
+Rows missing Customer ID,0
